@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; configuration.title = "Right"; ObjectID = "64T-fC-JuZ"; */
+"64T-fC-JuZ.configuration.title" = "Right";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "64T-fC-JuZ"; */
+"64T-fC-JuZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Left"; ObjectID = "Fdy-Rb-Wx0"; */
+"Fdy-Rb-Wx0.configuration.title" = "Left";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Fdy-Rb-Wx0"; */
+"Fdy-Rb-Wx0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Room Description"; ObjectID = "x8s-nq-zdZ"; */
+"x8s-nq-zdZ.text" = "Room Description";
