@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Tip Calculator
+//  tip-calculator
 //
 //  Created by Wilkins, Nolan W on 11/30/22.
 //
