@@ -8,7 +8,7 @@ for _ in 0..<10 {
     print("The value of foo is \(foo)")
 }
 //print("The value of foo is \(foo)")
-
+//foo is not in scope
 
 //:  Using a comment or print statement, describe why both print statements below compile when similar-looking code did not compile above. In what scope is `x` defined, and in what scope is it modified? In contrast, in what scope is `foo` defined and used?
 var x = 10
@@ -17,6 +17,8 @@ for _ in 0..<10 {
     print("The value of x is \(x)")
 }
 print("The final value of x is \(x)")
+
+//x is in scope
 
 
 //:  In the body of the function `greeting` below, use variable shadowing when unwrapping `greeting`. If `greeting` is successfully unwrapped, print a statement that uses the given greeting to greet the given name (i.e. if `greeting` successfully unwraps to have the value "Hi there" and `name` is `Sara`, print "Hi there, Sara."). Otherwise, use "Hello" to print a statement greeting the given name. Call the function twice, once passing in a value for greeting, and once passing in `nil`.
