@@ -28,8 +28,8 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="tec-Eg-yZS">
                                                         <rect key="frame" x="0.0" y="0.0" width="119" height="128"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-Vn-1G8">
-                                                        <rect key="frame" x="49" y="54" width="52" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-Vn-1G8">
+                                                        <rect key="frame" x="59.000000000000007" y="54" width="13.333333333333336" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                                     <constraint firstItem="2Dh-Vn-1G8" firstAttribute="centerY" secondItem="UjL-4q-UHF" secondAttribute="centerY" id="Q9U-Hk-Spj"/>
                                                     <constraint firstItem="tec-Eg-yZS" firstAttribute="top" secondItem="UjL-4q-UHF" secondAttribute="top" id="mLi-1f-NcK"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Dh-Vn-1G8" secondAttribute="trailing" constant="20" symbolic="YES" id="rqc-Ih-S17"/>
-                                                    <constraint firstItem="2Dh-Vn-1G8" firstAttribute="leading" secondItem="UjL-4q-UHF" secondAttribute="leading" constant="49" id="tc2-a4-eEU"/>
+                                                    <constraint firstItem="2Dh-Vn-1G8" firstAttribute="leading" secondItem="UjL-4q-UHF" secondAttribute="leading" constant="59" id="tc2-a4-eEU"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gde-Xw-r05">
@@ -51,8 +51,8 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-0F-a1n">
                                                         <rect key="frame" x="0.0" y="0.0" width="149" height="128"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HON-im-6pC">
-                                                        <rect key="frame" x="36" y="54" width="52" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HON-im-6pC">
+                                                        <rect key="frame" x="50" y="54" width="23.333333333333329" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="HON-im-6pC" firstAttribute="top" secondItem="Gde-Xw-r05" secondAttribute="top" constant="54" id="3KN-lF-UdE"/>
-                                                    <constraint firstItem="HON-im-6pC" firstAttribute="leading" secondItem="Gde-Xw-r05" secondAttribute="leading" constant="36" id="51b-EY-QnM"/>
+                                                    <constraint firstItem="HON-im-6pC" firstAttribute="leading" secondItem="Gde-Xw-r05" secondAttribute="leading" constant="50" id="51b-EY-QnM"/>
                                                     <constraint firstItem="HON-im-6pC" firstAttribute="centerY" secondItem="Oec-0F-a1n" secondAttribute="centerY" id="FqI-k4-FFB"/>
                                                     <constraint firstItem="Oec-0F-a1n" firstAttribute="top" secondItem="Gde-Xw-r05" secondAttribute="top" id="FrC-gv-FlC"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HON-im-6pC" secondAttribute="trailing" constant="20" symbolic="YES" id="JhW-Hd-7PZ"/>
@@ -98,7 +98,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="inputFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gqM-EF-Mlm"/>
+                                    <action selector="inputFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="GEJ-CN-IhD"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -120,7 +120,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputField" destination="fVT-pE-Ovl" id="VTH-d9-b5o"/>
+                        <outlet property="inputField" destination="zFa-eH-hzw" id="mPf-sP-bbR"/>
                         <outlet property="numberLabel" destination="9H2-bn-hBX" id="BVX-Gb-cvq"/>
                         <outlet property="scoreLabel" destination="2Dh-Vn-1G8" id="5qP-Tn-Mk2"/>
                         <outlet property="timeLabel" destination="HON-im-6pC" id="7gQ-Id-WbP"/>
