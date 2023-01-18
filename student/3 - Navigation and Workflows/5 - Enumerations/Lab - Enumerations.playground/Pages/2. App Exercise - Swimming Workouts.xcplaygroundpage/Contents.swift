@@ -5,10 +5,19 @@
 
  Previous app exercises have introduced the idea that your fitness tracking app may allow users to track swimming workouts. Create a `SwimmingWorkout` struct below with properties for `distance`, `time`, and `stroke`. `distance` and `time` should be of type `Double` and will represent distance in meters and time in seconds, and `stroke` should be of type `String`.
  */
-
+struct SwimmingWorkout{
+    var distance: Double
+    var time: Double
+    var stroke: Stroke
+    
+    enum Stroke{
+        case freestyle, butterfly, breaststroke
+    }
+}
 
 //:  Allowing `stroke` to be of type `String` isn't very type-safe. Inside the `SwimmingWorkout` struct, create an enum called `Stroke` that has cases for `freestyle`, `butterfly`, `backstroke`, and `breaststroke`. Change the type of `stroke` from `String` to `Stroke`. Create two instances of `SwimmingWorkout` objects.
-
+var free = SwimmingWorkout(distance: 103.2, time: 24.5, stroke: SwimmingWorkout.Stroke.freestyle)
+var fly = SwimmingWorkout(distance: 78.3, time: 14.6, stroke: SwimmingWorkout.Stroke.butterfly)
 
 //:  Now imagine you want to log swimming workouts separately based on the swimming stroke. You might use arrays as static variables on `SwimmingWorkout` for this. Add four static variables, `freestyleWorkouts`, `butterflyWorkouts`, `backstrokeWorkouts`, and `breaststrokeWorkouts`, to `SwimmingWorkout` above. Each should be of type `[SwimmingWorkout]` and should default to empty arrays.
  

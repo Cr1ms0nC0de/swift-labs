@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background.jpg")!)
         numberLabel.text = "\(Int.random(in: 1000...9999))"
-        
     }
     
     
