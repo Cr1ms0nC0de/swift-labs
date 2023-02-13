@@ -34,7 +34,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                 <connections>
-                                    <segue destination="GWf-vG-sd4" kind="show" id="Xe1-XG-O6e"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIz-iO-ewR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQQ-n0-1pV">
@@ -68,27 +68,102 @@
                         <outlet property="usernameInput" destination="54I-1x-nvB" id="Bch-5Q-lwP"/>
                         <segue destination="SRS-tr-WFD" kind="show" identifier="forgotUserOrPass" destinationCreationSelector="ForgotUserorPass" id="tpY-Xy-Q3c"/>
                         <segue destination="I3H-NS-yu7" kind="show" identifier="createAccount" id="EAj-kc-OQ0"/>
+                        <segue destination="GWf-vG-sd4" kind="show" identifier="login" id="Lgn-2G-bZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
         </scene>
-        <!--View Controller-->
+        <!--Logged InVC-->
         <scene sceneID="T1O-Af-hnT">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="GWf-vG-sd4" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="GWf-vG-sd4" customClass="LoggedInVC" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="655-gT-s57">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-6U-NU8">
+                                <rect key="frame" x="174" y="345" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXL-yy-LZs">
+                                <rect key="frame" x="174" y="374" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSW-cb-BEv">
+                                <rect key="frame" x="174" y="403" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-cF-cn7">
+                                <rect key="frame" x="174" y="432" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCq-7b-hsg">
+                                <rect key="frame" x="174" y="461" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuR-15-o7L">
+                                <rect key="frame" x="73" y="494" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="removeHour:" destination="GWf-vG-sd4" eventType="touchUpInside" id="hoa-GB-WvL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jue-KI-fa3">
+                                <rect key="frame" x="147" y="548" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="hoursEntered:" destination="GWf-vG-sd4" eventType="editingDidEnd" id="pq4-2O-wXO"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYj-v9-cQ7">
+                                <rect key="frame" x="240" y="494" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="incrementHour:" destination="GWf-vG-sd4" eventType="touchUpInside" id="Bcu-bY-Oen"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Wtm-rg-8yH"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="pgR-kB-yWP"/>
+                    <connections>
+                        <outlet property="addHourButton" destination="LYj-v9-cQ7" id="jCb-Ez-SbW"/>
+                        <outlet property="congratulationsMessage" destination="YCq-7b-hsg" id="muh-Cm-klT"/>
+                        <outlet property="currentHoursLabel" destination="sXL-yy-LZs" id="6cO-yL-rDm"/>
+                        <outlet property="helpMessage" destination="9QC-cF-cn7" id="8nc-fe-VDc"/>
+                        <outlet property="hoursEntry" destination="Jue-KI-fa3" id="WtD-lJ-Ife"/>
+                        <outlet property="progressLabel" destination="VSW-cb-BEv" id="sL4-ox-dhO"/>
+                        <outlet property="removeHourButton" destination="DuR-15-o7L" id="viW-eZ-2t6"/>
+                        <outlet property="welcomeLabel" destination="Wrv-6U-NU8" id="Qdf-76-Abj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olW-rk-G2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789" y="-28"/>
+            <point key="canvasLocation" x="1787.6923076923076" y="-28.436018957345969"/>
         </scene>
         <!--Bad-->
         <scene sceneID="v6w-LH-oXe">

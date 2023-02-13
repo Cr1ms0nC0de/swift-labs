@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    let defaults = UserDefaults.standard
+    var users = [] as? [Person]
+    var loggedInUser: Person = Person(user: "temp", pass: "temp", currHours: 0, tarHours: 0)!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,5 +41,52 @@ class ViewController: UIViewController {
     
     @IBAction func forgotPassButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "forgotUserOrPass", sender: nil)
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        if let data = defaults.data(forKey: "arr") {
+            do {
+                // Create JSON Decoder
+                let decoder = JSONDecoder()
+                
+                // Decode Person
+                users = try decoder.decode([Person].self, from: data)
+                
+            }
+            catch {
+                print("Unable to Decode People (\(error))")
+            }
+            
+            let username = usernameInput.text
+            let password = passwordInput.text
+            var peopleIterator = users?.makeIterator()
+            var foundUser: Bool = false
+            while let p = peopleIterator?.next(){
+                if(p.username == username && p.password == password){
+                    foundUser = true
+                    loggedInUser = p
+                }
+                if foundUser{
+                    usernameInput.text = ""
+                    passwordInput.text = ""
+                    performSegue(withIdentifier: "login", sender:loginButton)
+                }
+                else{
+                    usernameInput.text = ""
+                    passwordInput.text = ""
+                    invalidAlert()
+                }
+            }
+        }
+        func invalidAlert()
+        {
+            let message = UIAlertController(title: "Invalid Username or Password", message: "Please try again", preferredStyle: .alert)
+            func invalidPressed(){
+                return
+            }
+            message.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in invalidPressed()}))
+            
+            self.present(message, animated: true, completion: nil)
+        }
     }
 }

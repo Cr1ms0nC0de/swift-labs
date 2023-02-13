@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreateAccountVC: UIViewController {
+class CreateAccountVC: UIViewController{
     
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
@@ -33,52 +33,66 @@ class CreateAccountVC: UIViewController {
     @IBAction func createAccountButton(_ sender: UIButton) {
         if username != "" && password != ""{
             
-            struct Person: Codable{
-                let username: String
-                let password: String
-                var currentHours: Int
-                let targetHours: Int
+            
+//            let person = Person(username: username, password: password, currentHours: 0, targetHours: 0)
+            
+            var person = Person(user: username, pass: password, currHours: 0, tarHours: 0)!
+            
+            var people = [] as? [Person]
+            if let data = defaults.data(forKey: "arr") {
+                do {
+                    // Create JSON Decoder
+                    let decoder = JSONDecoder()
+
+                    // Decode Person
+                    people = try decoder.decode([Person].self, from: data)
+
+//                    print(people.map { $0.username })
+                    print(people?.count)
+                } catch {
+                    print("Unable to Decode People (\(error))")
+                }
             }
-            let person = Person(username: username, password: password, currentHours: 0, targetHours: 0)
-            var people = defaults.object(forKey: "arr") as? [Person] ?? []
+//            var people = defaults.object(forKey: "arr") as? [Person] ?? [] as? [Person]
             do {
-                people.append(person)
+                people?.append(person)
                 // Create JSON Encoder
                 let encoder = JSONEncoder()
                 
-                // Encode Note
+                // Encode Person
                 var data = try encoder.encode(people)
                 
-                
-                
+                        
                 // Write/Set Data
-               defaults.set(data, forKey: "arr")
-                print(data.count)
+                defaults.set(data, forKey: "arr")
+                var peopleIterator = people?.makeIterator()
+                while let p = peopleIterator?.next(){
+                    print("\(p.username): \(p.password)")
+                }
+                print("---")
 
             } catch {
                 print("Unable to Encode Array of People (\(error))")
             }
             
             
-            if let data = defaults.data(forKey: "arr") {
-                do {
-                    // Create JSON Decoder
-                    let decoder = JSONDecoder()
-
-                    // Decode Note
-                    let people = try decoder.decode([Person].self, from: data)
-                    
-
-                } catch {
-                    print("Unable to Decode Notes (\(error))")
-                }
-            }
+//            if let data = defaults.data(forKey: "arr") {
+//                do {
+//                    // Create JSON Decoder
+//                    let decoder = JSONDecoder()
+//
+//                    // Decode Person
+//                    let people = try decoder.decode([Person].self, from: data)
+//
+//                    print(people.map { $0.username })
+//                    print(people.count)
+//                } catch {
+//                    print("Unable to Decode People (\(error))")
+//                }
+//            }
         }
     }
         
-        @IBAction func unwindToLogIn(unwindSegue: UIStoryboardSegue) {
-            
-        }
         /*
          // MARK: - Navigation
          

@@ -8,16 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		9343CB50297B0DA5004F45FC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343CB4F297B0DA5004F45FC /* CreateAccountVC.swift */; };
+		937711AD29956768002A1519 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937711AC29956768002A1519 /* Person.swift */; };
 		93A2AD1929786B5F002C390A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A2AD1829786B5F002C390A /* AppDelegate.swift */; };
 		93A2AD1B29786B5F002C390A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A2AD1A29786B5F002C390A /* SceneDelegate.swift */; };
 		93A2AD1D29786B5F002C390A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A2AD1C29786B5F002C390A /* ViewController.swift */; };
 		93A2AD2029786B5F002C390A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A2AD1E29786B5F002C390A /* Main.storyboard */; };
 		93A2AD2229786B61002C390A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A2AD2129786B61002C390A /* Assets.xcassets */; };
 		93A2AD2529786B61002C390A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A2AD2329786B61002C390A /* LaunchScreen.storyboard */; };
+		93E16AF5299AA4E400C5C414 /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E16AF4299AA4E400C5C414 /* LoggedInVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9343CB4F297B0DA5004F45FC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		937711AC29956768002A1519 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		93A2AD1529786B5F002C390A /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A2AD1829786B5F002C390A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93A2AD1A29786B5F002C390A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		93A2AD2129786B61002C390A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93A2AD2429786B61002C390A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A2AD2629786B61002C390A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E16AF4299AA4E400C5C414 /* LoggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		93A2AD1729786B5F002C390A /* Voluntracker */ = {
 			isa = PBXGroup;
 			children = (
+				93E16AF4299AA4E400C5C414 /* LoggedInVC.swift */,
 				93A2AD1829786B5F002C390A /* AppDelegate.swift */,
 				93A2AD1A29786B5F002C390A /* SceneDelegate.swift */,
 				93A2AD1C29786B5F002C390A /* ViewController.swift */,
@@ -66,6 +71,7 @@
 				93A2AD2329786B61002C390A /* LaunchScreen.storyboard */,
 				93A2AD2629786B61002C390A /* Info.plist */,
 				9343CB4F297B0DA5004F45FC /* CreateAccountVC.swift */,
+				937711AC29956768002A1519 /* Person.swift */,
 			);
 			path = Voluntracker;
 			sourceTree = "<group>";
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937711AD29956768002A1519 /* Person.swift in Sources */,
 				9343CB50297B0DA5004F45FC /* CreateAccountVC.swift in Sources */,
 				93A2AD1D29786B5F002C390A /* ViewController.swift in Sources */,
+				93E16AF5299AA4E400C5C414 /* LoggedInVC.swift in Sources */,
 				93A2AD1929786B5F002C390A /* AppDelegate.swift in Sources */,
 				93A2AD1B29786B5F002C390A /* SceneDelegate.swift in Sources */,
 			);
