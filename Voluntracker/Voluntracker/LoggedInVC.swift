@@ -150,7 +150,7 @@ class LoggedInVC: UIViewController {
     func storeGoalHours()
     {
 //        var users = defaults.object(forKey: "Goal Hours") as? [String:Double] ?? [:]
-        var people  = targetHours
+            
         
         do {
             // Create JSON Encoder
@@ -196,18 +196,5 @@ class LoggedInVC: UIViewController {
         removeHourButton.isHidden = false
         
         currentHoursLabel.text = "\(currentHours) out of \(targetHours)"
-    }
-    func assignbackground(){
-        let background = UIImage(named: "login-background.jpg")
-        
-        // Settings to make the background image display nicely
-        var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
     }
 }
