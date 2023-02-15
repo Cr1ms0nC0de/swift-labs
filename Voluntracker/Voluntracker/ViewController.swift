@@ -70,6 +70,7 @@ class ViewController: UIViewController {
                     usernameInput.text = ""
                     passwordInput.text = ""
                     performSegue(withIdentifier: "login", sender:loginButton)
+                    //Send username to login segue
                 }
                 else{
                     usernameInput.text = ""

@@ -55,7 +55,11 @@ class CreateAccountVC: UIViewController{
             }
 //            var people = defaults.object(forKey: "arr") as? [Person] ?? [] as? [Person]
             do {
+                
+                //If has other Instances of person delete all other instances of this person
+            
                 people?.append(person)
+                
                 // Create JSON Encoder
                 let encoder = JSONEncoder()
                 
