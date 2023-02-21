@@ -62,6 +62,7 @@ class ViewController: UIViewController {
             var peopleIterator = users?.makeIterator()
             var foundUser: Bool = false
             while let p = peopleIterator?.next(){
+                print("Person \(p.username): \(p.password) variable \(username): \(password)")
                 if(p.username == username && p.password == password){
                     foundUser = true
                     loggedInUser = p
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
                     usernameInput.text = ""
                     passwordInput.text = ""
                     performSegue(withIdentifier: "login", sender:loginButton)
+                    //Send username to login segue
                 }
                 else{
                     usernameInput.text = ""

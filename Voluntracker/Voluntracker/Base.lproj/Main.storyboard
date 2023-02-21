@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1043.0769230769231" y="-28.436018957345969"/>
         </scene>
-        <!--Logged InVC-->
+        <!--AHH-->
         <scene sceneID="T1O-Af-hnT">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="GWf-vG-sd4" customClass="LoggedInVC" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +149,7 @@
                         <viewLayoutGuide key="safeArea" id="Wtm-rg-8yH"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pgR-kB-yWP"/>
+                    <navigationItem key="navigationItem" title="AHH" id="pgR-kB-yWP"/>
                     <connections>
                         <outlet property="addHourButton" destination="LYj-v9-cQ7" id="jCb-Ez-SbW"/>
                         <outlet property="congratulationsMessage" destination="YCq-7b-hsg" id="muh-Cm-klT"/>

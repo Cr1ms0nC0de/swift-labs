@@ -33,7 +33,8 @@ class LoggedInVC: UIViewController {
     var userExists : Bool = false
     
     var people = [] as? [Person]
-    
+
+    var currentUser: Person = Person(user: "temp", pass: "temp", currHours: 0, tarHours: 0)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,10 @@ class LoggedInVC: UIViewController {
                 // Decode Person
                 people = try decoder.decode([Person].self, from: data)
                 print(people?.count)
-            } catch {
+                //set username to the username provided by the segue
+                //set currentUser to the currentUser through defaults.data(forKey: "arr")
+            } 
+            catch {
                 print("Unable to Decode People (\(error))")
             }
         }
@@ -161,6 +165,10 @@ class LoggedInVC: UIViewController {
             
                     
             // Write/Set Data
+
+            //set value of players targetHours to targetHours
+            //Delete previous instance of player
+            //readd player to array
             defaults.set(data, forKey: "arr")
             var peopleIterator = people?.makeIterator()
             while let p = peopleIterator?.next(){
@@ -172,13 +180,13 @@ class LoggedInVC: UIViewController {
             print("Unable to Encode Array of People (\(error))")
         }
         
-        defaults.set(users, forKey: "Goal Hours")
+        //defaults.set(users, forKey: "Goal Hours")
         
     }
     func storeCurrentHours()
     {
         var users = defaults.object(forKey: "Current Hours") as? [String:Double] ?? [:]
-        users[username] = currentHours
+        //users[username] = currentHours
         
         defaults.set(users, forKey: "Current Hours")
         
