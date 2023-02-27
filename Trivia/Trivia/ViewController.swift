@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    
-
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var questionCountPicker: UIPickerView!
     
     var categoryData: [String] = [String]()
     var questionCountData: [String] = [String]()
     var questionAmount : Int = 0
+    var questionNumberSelected : Int = 0
+    var categorySelected : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,14 +60,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     // Capture the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+              
         if pickerView == categoryPicker{
-            print("Category")
+            print("category selected")
+                  
+            categorySelected = categoryData[row]
+                  
+            let secondTab = (self.tabBarController?.viewControllers![1] as! gamePage)
+                secondTab.categorySelected = categorySelected
         }
         else{
-            print("Quesstion")
+            print("question number picked")
+            questionNumberSelected = Int(questionCountData[row])!
+                  
+            let secondTab = (self.tabBarController?.viewControllers![1] as! gamePage)
+            secondTab.questionNumberSelected = questionNumberSelected
         }
     }
 }

@@ -82,21 +82,61 @@
             </objects>
             <point key="canvasLocation" x="90.769230769230759" y="-34.123222748815166"/>
         </scene>
-        <!--Item-->
+        <!--Game-->
         <scene sceneID="qc5-sz-GlZ">
             <objects>
-                <viewController id="wFW-3f-j4C" sceneMemberID="viewController">
+                <viewController id="wFW-3f-j4C" customClass="gamePage" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MxG-9e-wYR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8o-jx-Asb">
+                                <rect key="frame" x="174" y="244" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqx-YL-ejV">
+                                <rect key="frame" x="158" y="351" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dp9-4q-R46">
+                                <rect key="frame" x="158" y="405" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="046-We-KWy">
+                                <rect key="frame" x="158" y="448" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-lo-nFJ">
+                                <rect key="frame" x="158" y="491" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tWO-CO-vqS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jei-zd-72G"/>
+                    <tabBarItem key="tabBarItem" title="Game" id="jei-zd-72G"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="q8o-jx-Asb" id="Biz-eU-4l2"/>
+                        <outletCollection property="answerButtons" destination="sqx-YL-ejV" collectionClass="NSMutableArray" id="yoV-e1-Fff"/>
+                        <outletCollection property="answerButtons" destination="dp9-4q-R46" collectionClass="NSMutableArray" id="n9i-Gg-5uS"/>
+                        <outletCollection property="answerButtons" destination="046-We-KWy" collectionClass="NSMutableArray" id="mJQ-az-r02"/>
+                        <outletCollection property="answerButtons" destination="hqG-lo-nFJ" collectionClass="NSMutableArray" id="2o5-xo-TvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lT-zm-r4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="680"/>
+            <point key="canvasLocation" x="1020" y="679.62085308056874"/>
         </scene>
     </scenes>
     <resources>
