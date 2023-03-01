@@ -14,9 +14,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var categoryData: [String] = [String]()
     var questionCountData: [String] = [String]()
-    var questionAmount : Int = 0
-    var questionNumberSelected : Int = 0
-    var categorySelected : String = ""
+    var questionAmount : Int = 1
+    var questionNumberSelected : Int = 1
+    var categorySelected : String = Trivia.triviaQuestions.first!.key
     
     override func viewDidLoad() {
         super.viewDidLoad()
