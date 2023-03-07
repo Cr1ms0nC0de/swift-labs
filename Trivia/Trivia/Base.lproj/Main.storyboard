@@ -121,12 +121,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-U0-j5N">
+                                <rect key="frame" x="16" y="757" width="358" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tWO-CO-vqS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Game" id="jei-zd-72G"/>
                     <connections>
+                        <outlet property="progressBar" destination="sEL-U0-j5N" id="qlz-TT-xBA"/>
                         <outlet property="questionLabel" destination="q8o-jx-Asb" id="Biz-eU-4l2"/>
                         <outletCollection property="answerButtons" destination="sqx-YL-ejV" collectionClass="NSMutableArray" id="yoV-e1-Fff"/>
                         <outletCollection property="answerButtons" destination="dp9-4q-R46" collectionClass="NSMutableArray" id="n9i-Gg-5uS"/>

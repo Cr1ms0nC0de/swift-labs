@@ -10,6 +10,7 @@ import UIKit
 class gamePage: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var categorySelected : String = Trivia.triviaQuestions.first!.key
     var questionNumberSelected : Int = 1
@@ -31,6 +32,7 @@ class gamePage: UIViewController {
         questions = triviaQuestions[categorySelected]!
         questions.shuffle()
         setupQuestion()
+        progressBar.progress = 0
     }
     
     @IBAction func answerSelected(_ sender: UIButton){
@@ -42,12 +44,14 @@ class gamePage: UIViewController {
             print("wrong")
         }
         print("Current Score: \(score)")
-        if(currentQuestionIndex < questionNumberSelected){
+        if(currentQuestionIndex < questionNumberSelected - 1){
             currentQuestionIndex += 1
             setupQuestion()
         }
         else{
             print("Final Score: \(score) out of \(questionNumberSelected)")
+            progressBar.progress = 1
+            setupAlert()
         }
     }
     func setupQuestion(){
@@ -59,5 +63,16 @@ class gamePage: UIViewController {
             i.setTitle(answers[index] , for: .normal)
             index += 1
         }
+        progressBar.progress = (Float(currentQuestionIndex))/Float(questionNumberSelected)
+    }
+    func setupAlert(){
+        let alert = UIAlertController(title: "Results", message: "Final Score: \(score) out of \(questionNumberSelected)", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "Start Over", style: .default) { (action) in
+            self.tabBarController?.selectedIndex = 0
+            self.currentQuestionIndex = 0
+            self.score = 0
+        }
+        alert.addAction(OKAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
