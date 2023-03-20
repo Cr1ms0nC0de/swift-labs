@@ -30,11 +30,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8U-ys-FxY">
-                                <rect key="frame" x="-1" y="223" width="390" height="162"/>
+                                <rect key="frame" x="-3" y="223" width="390" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQt-ht-EQL">
-                                <rect key="frame" x="-1" y="463" width="390" height="162"/>
+                                <rect key="frame" x="-3" y="463" width="390" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many questions?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bu4-oD-fdM">
@@ -137,11 +137,51 @@
                         <outletCollection property="answerButtons" destination="dp9-4q-R46" collectionClass="NSMutableArray" id="n9i-Gg-5uS"/>
                         <outletCollection property="answerButtons" destination="046-We-KWy" collectionClass="NSMutableArray" id="mJQ-az-r02"/>
                         <outletCollection property="answerButtons" destination="hqG-lo-nFJ" collectionClass="NSMutableArray" id="2o5-xo-TvV"/>
+                        <segue destination="BFw-2O-B3l" kind="show" identifier="end" id="CHj-ol-RwY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lT-zm-r4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="679.62085308056874"/>
+        </scene>
+        <!--End Page-->
+        <scene sceneID="Fnn-Kh-pTY">
+            <objects>
+                <viewController id="BFw-2O-B3l" customClass="endPage" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6O6-9w-aYc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6n-Z7-0ln">
+                                <rect key="frame" x="16" y="258" width="358" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ8-uy-mRt">
+                                <rect key="frame" x="145" y="343" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Over"/>
+                                <connections>
+                                    <segue destination="fRW-3N-ydU" kind="unwind" unwindAction="unwindToStartWithUnwindSegue:" id="k8i-tX-78Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3K9-7x-1Jq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d6a-fT-mOJ"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="i6n-Z7-0ln" id="bRX-VU-t0o"/>
+                        <outlet property="startOverButton" destination="KJ8-uy-mRt" id="pUf-Fn-hoK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywP-N1-sNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fRW-3N-ydU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="679.62085308056874"/>
         </scene>
     </scenes>
     <resources>

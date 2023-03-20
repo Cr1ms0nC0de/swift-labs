@@ -51,7 +51,10 @@ class gamePage: UIViewController {
         else{
             print("Final Score: \(score) out of \(questionNumberSelected)")
             progressBar.progress = 1
-            setupAlert()
+            performSegue(withIdentifier: "end", sender: nil)
+            self.currentQuestionIndex = 0
+            self.score = 0
+            //setupAlert()
         }
     }
     func setupQuestion(){
@@ -66,6 +69,7 @@ class gamePage: UIViewController {
         progressBar.progress = (Float(currentQuestionIndex))/Float(questionNumberSelected)
     }
     func setupAlert(){
+        performSegue(withIdentifier: "end", sender: nil)
         let alert = UIAlertController(title: "Results", message: "Final Score: \(score) out of \(questionNumberSelected)", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "Start Over", style: .default) { (action) in
             self.tabBarController?.selectedIndex = 0
@@ -74,5 +78,10 @@ class gamePage: UIViewController {
         }
         alert.addAction(OKAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? endPage
+        destinationVC?.questionNumberSelected = questionNumberSelected
+        destinationVC?.score = score
     }
 }
