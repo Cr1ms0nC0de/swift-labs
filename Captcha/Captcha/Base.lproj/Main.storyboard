@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Captcha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-9Y-COF">
+                                <rect key="frame" x="50" y="147" width="290" height="621.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1eN-eQ-uPQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="285.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-cV-ziV" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="285.66666666666669"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v6A-rj-sPV" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="0.0" width="120" height="285.66666666666669"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="KuX-cV-ziV" firstAttribute="width" secondItem="v6A-rj-sPV" secondAttribute="width" id="Aep-yL-OWp"/>
+                                            <constraint firstItem="KuX-cV-ziV" firstAttribute="height" secondItem="v6A-rj-sPV" secondAttribute="height" id="dcH-VP-G99"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1Y1-l6-FGp">
+                                        <rect key="frame" x="0.0" y="335.66666666666663" width="290" height="285.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UQX-rX-saj" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="285.66666666666669"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jHR-NO-9Vl" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="173.66666666666666" y="0.0" width="116.33333333333334" height="285.66666666666669"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="116.33333333333334" id="BrB-x8-lEe"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1eN-eQ-uPQ" firstAttribute="height" secondItem="1Y1-l6-FGp" secondAttribute="height" id="Acn-ek-NHL"/>
+                                    <constraint firstItem="1Y1-l6-FGp" firstAttribute="top" secondItem="vSK-9Y-COF" secondAttribute="top" constant="335.66666666666674" id="GFR-If-OX7"/>
+                                    <constraint firstItem="1eN-eQ-uPQ" firstAttribute="width" secondItem="1Y1-l6-FGp" secondAttribute="width" id="pqB-AM-Y7d"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Image that contains" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neN-oT-mmX">
+                                <rect key="frame" x="0.0" y="86" width="390" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="neN-oT-mmX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="CGb-uu-4aA"/>
+                            <constraint firstItem="neN-oT-mmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CLN-2V-V4P"/>
+                            <constraint firstItem="neN-oT-mmX" firstAttribute="centerX" secondItem="vSK-9Y-COF" secondAttribute="centerX" id="J4c-ur-hyq"/>
+                            <constraint firstItem="vSK-9Y-COF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="PaY-b6-ADX"/>
+                            <constraint firstItem="vSK-9Y-COF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYF-rc-S13"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="correctAnswerLabel" destination="neN-oT-mmX" id="H7Q-3Q-lcX"/>
+                        <outletCollection property="imageViews" destination="KuX-cV-ziV" collectionClass="NSMutableArray" id="pmi-JM-lBd"/>
+                        <outletCollection property="imageViews" destination="v6A-rj-sPV" collectionClass="NSMutableArray" id="gJY-B9-7fe"/>
+                        <outletCollection property="imageViews" destination="UQX-rX-saj" collectionClass="NSMutableArray" id="nI2-An-20B"/>
+                        <outletCollection property="imageViews" destination="jHR-NO-9Vl" collectionClass="NSMutableArray" id="Om7-7b-lCy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.846153846153847" y="-34.123222748815166"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
