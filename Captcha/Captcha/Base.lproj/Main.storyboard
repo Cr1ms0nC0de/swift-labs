@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AuH-yd-Nhk">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vSK-9Y-COF">
-                                <rect key="frame" x="50" y="147" width="290" height="621.33333333333337"/>
+                                <rect key="frame" x="50" y="191" width="290" height="621.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1eN-eQ-uPQ">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="285.66666666666669"/>
@@ -59,8 +59,8 @@
                                     <constraint firstItem="1eN-eQ-uPQ" firstAttribute="width" secondItem="1Y1-l6-FGp" secondAttribute="width" id="pqB-AM-Y7d"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Image that contains" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neN-oT-mmX">
-                                <rect key="frame" x="0.0" y="86" width="390" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Image that contains" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neN-oT-mmX">
+                                <rect key="frame" x="0.0" y="130" width="390" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,15 +76,90 @@
                             <constraint firstItem="vSK-9Y-COF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYF-rc-S13"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fHK-Js-fv6"/>
                     <connections>
                         <outlet property="correctAnswerLabel" destination="neN-oT-mmX" id="H7Q-3Q-lcX"/>
                         <outletCollection property="imageViews" destination="KuX-cV-ziV" collectionClass="NSMutableArray" id="pmi-JM-lBd"/>
                         <outletCollection property="imageViews" destination="v6A-rj-sPV" collectionClass="NSMutableArray" id="gJY-B9-7fe"/>
                         <outletCollection property="imageViews" destination="UQX-rX-saj" collectionClass="NSMutableArray" id="nI2-An-20B"/>
                         <outletCollection property="imageViews" destination="jHR-NO-9Vl" collectionClass="NSMutableArray" id="Om7-7b-lCy"/>
+                        <segue destination="UhO-vu-Z5q" kind="show" identifier="audio" id="nU0-VD-VI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983.07692307692309" y="-34.123222748815166"/>
+        </scene>
+        <!--AudioVC-->
+        <scene sceneID="HgG-kE-cGa">
+            <objects>
+                <viewController id="UhO-vu-Z5q" customClass="AudioVC" customModule="Captcha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="94k-Tc-FEv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-aS-gYH">
+                                <rect key="frame" x="144" y="174" width="104" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Audio"/>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUg-Vy-PI5">
+                                <rect key="frame" x="53" y="282" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shB-cp-3xI">
+                                <rect key="frame" x="235" y="282" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qg-n5-cSI">
+                                <rect key="frame" x="235" y="405" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQm-tF-QFx">
+                                <rect key="frame" x="53" y="405" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2KK-xz-wog"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uGI-7E-RIe"/>
+                    <connections>
+                        <outlet property="audioButton" destination="c0I-aS-gYH" id="2kH-R1-jaa"/>
+                        <outletCollection property="answerButtons" destination="zUg-Vy-PI5" collectionClass="NSMutableArray" id="i94-2r-OFe"/>
+                        <outletCollection property="answerButtons" destination="shB-cp-3xI" collectionClass="NSMutableArray" id="2EP-Nq-qyf"/>
+                        <outletCollection property="answerButtons" destination="HQm-tF-QFx" collectionClass="NSMutableArray" id="Tkb-Ar-s3x"/>
+                        <outletCollection property="answerButtons" destination="7Qg-n5-cSI" collectionClass="NSMutableArray" id="Eg8-xR-HHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74X-O6-DLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946.1538461538462" y="-34.123222748815166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MYU-fG-iTE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AuH-yd-Nhk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JsU-63-afT">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qab-JY-VzX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtN-d6-xwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.846153846153847" y="-34.123222748815166"/>
         </scene>

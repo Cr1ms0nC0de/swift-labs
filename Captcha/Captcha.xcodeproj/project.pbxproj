@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		938F268D29D5F369004C974C /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938F268C29D5F369004C974C /* AudioVC.swift */; };
 		93EB8DA129CB5F7E00B95716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB8DA029CB5F7E00B95716 /* AppDelegate.swift */; };
 		93EB8DA329CB5F7E00B95716 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB8DA229CB5F7E00B95716 /* SceneDelegate.swift */; };
 		93EB8DA529CB5F7E00B95716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB8DA429CB5F7E00B95716 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		938F268C29D5F369004C974C /* AudioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
 		93EB8D9D29CB5F7E00B95716 /* Captcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EB8DA029CB5F7E00B95716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93EB8DA229CB5F7E00B95716 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				93EB8DA429CB5F7E00B95716 /* ViewController.swift */,
 				93EB8DB829CB606500B95716 /* CaptchaImageView.swift */,
 				93EF466329CE01990075D750 /* CaptchaButton.swift */,
+				938F268C29D5F369004C974C /* AudioVC.swift */,
 				93EB8DA629CB5F7E00B95716 /* Main.storyboard */,
 				93EB8DA929CB5F7F00B95716 /* Assets.xcassets */,
 				93EB8DAB29CB5F7F00B95716 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EB8DA529CB5F7E00B95716 /* ViewController.swift in Sources */,
+				938F268D29D5F369004C974C /* AudioVC.swift in Sources */,
 				93EB8DA129CB5F7E00B95716 /* AppDelegate.swift in Sources */,
 				93EB8DA329CB5F7E00B95716 /* SceneDelegate.swift in Sources */,
 				93EB8DB929CB606500B95716 /* CaptchaImageView.swift in Sources */,
