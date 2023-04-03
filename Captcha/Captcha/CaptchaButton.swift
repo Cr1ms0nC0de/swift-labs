@@ -11,6 +11,8 @@ import UIKit
 
 class CaptchaButton : UIImageView
 {
+    var buttonName : String = ""
+    
     func shake() {
             let animation = CABasicAnimation(keyPath: "position")
             
@@ -23,4 +25,3 @@ class CaptchaButton : UIImageView
             self.layer.add(animation, forKey: "position")
         }
 }
-

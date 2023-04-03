@@ -84,11 +84,37 @@
                         <outletCollection property="imageViews" destination="UQX-rX-saj" collectionClass="NSMutableArray" id="nI2-An-20B"/>
                         <outletCollection property="imageViews" destination="jHR-NO-9Vl" collectionClass="NSMutableArray" id="Om7-7b-lCy"/>
                         <segue destination="UhO-vu-Z5q" kind="show" identifier="audio" id="nU0-VD-VI1"/>
+                        <segue destination="ITY-m8-GOY" kind="show" identifier="robot" id="LCn-vX-NWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983.07692307692309" y="-34.123222748815166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m3y-Yc-0cA">
+            <objects>
+                <viewController id="ITY-m8-GOY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tso-ui-g0K">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Either a Robot or just bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAu-61-VQJ">
+                                <rect key="frame" x="68" y="91" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uv2-qK-Jph"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HBs-fN-9Ts"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5k-h3-qis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="689"/>
         </scene>
         <!--AudioVC-->
         <scene sceneID="HgG-kE-cGa">
@@ -103,6 +129,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play Audio"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="UhO-vu-Z5q" eventType="touchUpInside" id="1Oj-d3-XU1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUg-Vy-PI5">
                                 <rect key="frame" x="53" y="282" width="75" height="35"/>
@@ -134,16 +163,43 @@
                     </view>
                     <navigationItem key="navigationItem" id="uGI-7E-RIe"/>
                     <connections>
-                        <outlet property="audioButton" destination="c0I-aS-gYH" id="2kH-R1-jaa"/>
-                        <outletCollection property="answerButtons" destination="zUg-Vy-PI5" collectionClass="NSMutableArray" id="i94-2r-OFe"/>
-                        <outletCollection property="answerButtons" destination="shB-cp-3xI" collectionClass="NSMutableArray" id="2EP-Nq-qyf"/>
-                        <outletCollection property="answerButtons" destination="HQm-tF-QFx" collectionClass="NSMutableArray" id="Tkb-Ar-s3x"/>
-                        <outletCollection property="answerButtons" destination="7Qg-n5-cSI" collectionClass="NSMutableArray" id="Eg8-xR-HHc"/>
+                        <outlet property="audioButton" destination="c0I-aS-gYH" id="m5F-Kn-rWa"/>
+                        <outletCollection property="answerButtons" destination="zUg-Vy-PI5" collectionClass="NSMutableArray" id="Sv9-3d-Twg"/>
+                        <outletCollection property="answerButtons" destination="shB-cp-3xI" collectionClass="NSMutableArray" id="WSL-Im-hhF"/>
+                        <outletCollection property="answerButtons" destination="HQm-tF-QFx" collectionClass="NSMutableArray" id="sa7-vq-tyH"/>
+                        <outletCollection property="answerButtons" destination="7Qg-n5-cSI" collectionClass="NSMutableArray" id="pLE-8a-sid"/>
+                        <segue destination="kzS-7y-1Rh" kind="show" identifier="human" id="mM6-1p-vy2"/>
+                        <segue destination="ITY-m8-GOY" kind="show" identifier="robot" id="wSV-lb-2A8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74X-O6-DLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1946.1538461538462" y="-34.123222748815166"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oh3-2b-7Pg">
+            <objects>
+                <viewController id="kzS-7y-1Rh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6T-l7-JmA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are either not a robot or sentient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AI-7G-x3n">
+                                <rect key="frame" x="56" y="91" width="279" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="thT-9v-HTQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Frh-yY-LHD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdI-pL-1y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800" y="-34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MYU-fG-iTE">
@@ -164,6 +220,9 @@
             <point key="canvasLocation" x="53.846153846153847" y="-34.123222748815166"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wSV-lb-2A8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

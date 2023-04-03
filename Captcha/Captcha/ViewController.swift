@@ -43,33 +43,29 @@ class ViewController: UIViewController {
 //            playAlarm()
 //        }
     }
-    func assignRandomImages()
-    {
+    func assignRandomImages(){
         let imagePath = "\(Bundle.main.resourcePath!)/Images/"
         var mixedList = imageList
         mixedList.shuffle()
         var index = 0
-        for i in imageViews
-        {
+        for i in imageViews{
             i.image = UIImage(named: imagePath + mixedList[index])
             i.fileName = mixedList[index]
             index += 1
         }
         correctAnswerLabel.text = "Tap Image that contains\n\(getCorrectAnswer().dropLast(4))"
     }
-    func getCorrectAnswer() -> String
-        {
-            var listOfImages: [String] = []
+    func getCorrectAnswer() -> String{
+        var listOfImages: [String] = []
             
-            for img in imageViews
-            {
-                listOfImages.append(img.fileName)
-            }
-            if(currentCorrectAnswer == ""){
-                currentCorrectAnswer = listOfImages.randomElement()!
-            }
-            return currentCorrectAnswer
+        for img in imageViews{
+            listOfImages.append(img.fileName)
         }
+        if(currentCorrectAnswer == ""){
+                currentCorrectAnswer = listOfImages.randomElement()!
+        }
+        return currentCorrectAnswer
+    }
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             print("UIImageView tapped")
@@ -77,12 +73,12 @@ class ViewController: UIViewController {
             print(image.fileName)
             if(image.fileName == getCorrectAnswer()){
                 print("correct")
-//                setupSound()
+                performSegue(withIdentifier: "audio", sender: nil)
             }
             else{
                 print("incorrect")
                 currentCorrectAnswer = ""
-                assignRandomImages()
+                performSegue(withIdentifier: "robot", sender: nil)
             }
         }
     }
