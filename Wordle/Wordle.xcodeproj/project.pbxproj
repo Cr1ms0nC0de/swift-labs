@@ -15,6 +15,7 @@
 		4A5F984C29DB3AD800653B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F984A29DB3AD800653B2E /* LaunchScreen.storyboard */; };
 		4A5F985429DB3B5500653B2E /* Wordle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F985329DB3B5500653B2E /* Wordle.swift */; };
 		4A5F985829DB3C7B00653B2E /* words.txt in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F985729DB3C7B00653B2E /* words.txt */; };
+		9337464529E861FF000043E7 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337464429E861FF000043E7 /* WordDictionary.swift */; };
 		93EB0C2929DDD79900F1FEF0 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB0C2829DDD79900F1FEF0 /* Letter.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		4A5F984D29DB3AD800653B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5F985329DB3B5500653B2E /* Wordle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle.swift; sourceTree = "<group>"; };
 		4A5F985729DB3C7B00653B2E /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		9337464429E861FF000043E7 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
 		93EB0C2829DDD79900F1FEF0 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				4A5F984329DB3AD700653B2E /* ViewController.swift */,
 				4A5F985329DB3B5500653B2E /* Wordle.swift */,
 				93EB0C2829DDD79900F1FEF0 /* Letter.swift */,
+				9337464429E861FF000043E7 /* WordDictionary.swift */,
 				4A5F984529DB3AD700653B2E /* Main.storyboard */,
 				4A5F984829DB3AD800653B2E /* Assets.xcassets */,
 				4A5F984A29DB3AD800653B2E /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				93EB0C2929DDD79900F1FEF0 /* Letter.swift in Sources */,
 				4A5F984229DB3AD700653B2E /* SceneDelegate.swift in Sources */,
 				4A5F985829DB3C7B00653B2E /* words.txt in Sources */,
+				9337464529E861FF000043E7 /* WordDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
