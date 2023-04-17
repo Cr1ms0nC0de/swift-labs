@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ISpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-0t-HxO">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfd-QO-j7w">
+                                        <rect key="frame" x="0.0" y="0.0" width="1500" height="1500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pufferfish" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-IP-NSe">
+                                                <rect key="frame" x="160" y="328" width="75" height="81"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1500" id="LQY-FY-h6L"/>
+                                            <constraint firstAttribute="height" constant="1500" id="ig3-yK-J8J"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tfd-QO-j7w" secondAttribute="trailing" id="8sl-A9-dcs"/>
+                                    <constraint firstAttribute="bottom" secondItem="tfd-QO-j7w" secondAttribute="bottom" id="AzZ-L7-Qbu"/>
+                                    <constraint firstItem="tfd-QO-j7w" firstAttribute="leading" secondItem="PZH-0t-HxO" secondAttribute="leading" id="Rck-Z1-NaG"/>
+                                    <constraint firstItem="tfd-QO-j7w" firstAttribute="top" secondItem="PZH-0t-HxO" secondAttribute="top" id="rV8-M3-w3k"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E68-T4-lnZ"/>
+                            <constraint firstItem="tfd-QO-j7w" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="3.84615" id="ICw-DU-MfL"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L1z-gd-ujp"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qeo-uN-c8A"/>
+                            <constraint firstItem="tfd-QO-j7w" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1.96592" id="WyX-oM-xmp"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a4r-El-416"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bxv-yd-ert"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mEY-Ly-Lgv"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rzR-mX-JaV"/>
+                            <constraint firstItem="PZH-0t-HxO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sUd-3I-OOM"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="pufferfish" destination="Wo8-IP-NSe" id="ciO-mU-Kk2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.84615384615384" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pufferfish" width="1024" height="793"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
