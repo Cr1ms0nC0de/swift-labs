@@ -12,24 +12,31 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ISpy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-0t-HxO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-0t-HxO">
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfd-QO-j7w">
                                         <rect key="frame" x="0.0" y="0.0" width="1500" height="1500"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pufferfish" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-IP-NSe">
-                                                <rect key="frame" x="160" y="328" width="75" height="81"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="pql-Xc-3kf">
+                                                <rect key="frame" x="0.0" y="0.0" width="1500" height="1500"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pufferfish" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-IP-NSe">
+                                                <rect key="frame" x="160" y="328" width="10" height="10"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pql-Xc-3kf" secondAttribute="bottom" id="3Be-nF-Z4s"/>
+                                            <constraint firstItem="pql-Xc-3kf" firstAttribute="leading" secondItem="tfd-QO-j7w" secondAttribute="leading" id="9H1-Tg-DxK"/>
                                             <constraint firstAttribute="width" constant="1500" id="LQY-FY-h6L"/>
+                                            <constraint firstItem="pql-Xc-3kf" firstAttribute="top" secondItem="tfd-QO-j7w" secondAttribute="top" id="PUw-FQ-E4l"/>
+                                            <constraint firstAttribute="trailing" secondItem="pql-Xc-3kf" secondAttribute="trailing" id="dru-pi-Drf"/>
                                             <constraint firstAttribute="height" constant="1500" id="ig3-yK-J8J"/>
                                         </constraints>
                                     </view>
@@ -59,7 +66,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="mainView" destination="tfd-QO-j7w" id="3Bk-aU-Qym"/>
                         <outlet property="pufferfish" destination="Wo8-IP-NSe" id="ciO-mU-Kk2"/>
+                        <outlet property="scrollView" destination="PZH-0t-HxO" id="miJ-pe-lUv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,6 +78,7 @@
     </scenes>
     <resources>
         <image name="pufferfish" width="1024" height="793"/>
+        <image name="water" width="297" height="169"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
