@@ -10,6 +10,7 @@ import Foundation
 class WordDictionary{
     var words: [String] = []
     var correctWord: String = ""
+    var wordLength: Int = 5
     
     init(word: String) {
         if word != ""{
@@ -28,6 +29,10 @@ class WordDictionary{
         }
     }
     func setCorrectWord(){
-        correctWord = words.randomElement() ?? "error"
+        correctWord = words.randomElement()!
+        if correctWord.count != wordLength{
+            setCorrectWord()
+        }
+        print("Correct Word: \(correctWord)")
     }
 }

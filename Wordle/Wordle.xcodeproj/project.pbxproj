@@ -15,8 +15,10 @@
 		4A5F984C29DB3AD800653B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F984A29DB3AD800653B2E /* LaunchScreen.storyboard */; };
 		4A5F985429DB3B5500653B2E /* Wordle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F985329DB3B5500653B2E /* Wordle.swift */; };
 		4A5F985829DB3C7B00653B2E /* words.txt in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F985729DB3C7B00653B2E /* words.txt */; };
-		9337464529E861FF000043E7 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337464429E861FF000043E7 /* WordDictionary.swift */; };
-		93EB0C2929DDD79900F1FEF0 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB0C2829DDD79900F1FEF0 /* Letter.swift */; };
+		4AA1CF4029E5C6390044C0F6 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F985729DB3C7B00653B2E /* words.txt */; };
+		4AF068DE29EDB02800D6DC1D /* WordleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF068DD29EDB02800D6DC1D /* WordleEntry.swift */; };
+		933618AE29F2F063006BA215 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933618AD29F2F063006BA215 /* WordDictionary.swift */; };
+		933618B029F2F0A3006BA215 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933618AF29F2F0A3006BA215 /* Letter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,9 @@
 		4A5F984D29DB3AD800653B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5F985329DB3B5500653B2E /* Wordle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle.swift; sourceTree = "<group>"; };
 		4A5F985729DB3C7B00653B2E /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
-		9337464429E861FF000043E7 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
-		93EB0C2829DDD79900F1FEF0 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		4AF068DD29EDB02800D6DC1D /* WordleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleEntry.swift; sourceTree = "<group>"; };
+		933618AD29F2F063006BA215 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
+		933618AF29F2F0A3006BA215 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +67,13 @@
 		4A5F983E29DB3AD700653B2E /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				4AF068DD29EDB02800D6DC1D /* WordleEntry.swift */,
 				4A5F983F29DB3AD700653B2E /* AppDelegate.swift */,
 				4A5F984129DB3AD700653B2E /* SceneDelegate.swift */,
 				4A5F984329DB3AD700653B2E /* ViewController.swift */,
+				933618AD29F2F063006BA215 /* WordDictionary.swift */,
+				933618AF29F2F0A3006BA215 /* Letter.swift */,
 				4A5F985329DB3B5500653B2E /* Wordle.swift */,
-				93EB0C2829DDD79900F1FEF0 /* Letter.swift */,
-				9337464429E861FF000043E7 /* WordDictionary.swift */,
 				4A5F984529DB3AD700653B2E /* Main.storyboard */,
 				4A5F984829DB3AD800653B2E /* Assets.xcassets */,
 				4A5F984A29DB3AD800653B2E /* LaunchScreen.storyboard */,
@@ -137,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA1CF4029E5C6390044C0F6 /* words.txt in Resources */,
 				4A5F984C29DB3AD800653B2E /* LaunchScreen.storyboard in Resources */,
 				4A5F984929DB3AD800653B2E /* Assets.xcassets in Resources */,
 				4A5F984729DB3AD700653B2E /* Main.storyboard in Resources */,
@@ -151,12 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A5F985429DB3B5500653B2E /* Wordle.swift in Sources */,
+				933618AE29F2F063006BA215 /* WordDictionary.swift in Sources */,
 				4A5F984429DB3AD700653B2E /* ViewController.swift in Sources */,
+				933618B029F2F0A3006BA215 /* Letter.swift in Sources */,
 				4A5F984029DB3AD700653B2E /* AppDelegate.swift in Sources */,
-				93EB0C2929DDD79900F1FEF0 /* Letter.swift in Sources */,
+				4AF068DE29EDB02800D6DC1D /* WordleEntry.swift in Sources */,
 				4A5F984229DB3AD700653B2E /* SceneDelegate.swift in Sources */,
 				4A5F985829DB3C7B00653B2E /* words.txt in Sources */,
-				9337464529E861FF000043E7 /* WordDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +317,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
