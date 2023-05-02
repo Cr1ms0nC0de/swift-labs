@@ -1,14 +1,16 @@
 //
 //  AppDelegate.swift
-//  Mynance
+//  mynance
 //
-//  Created by Wilkins, Nolan W on 4/27/23.
+//  Created by Iyer, Eshan R on 4/25/23.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

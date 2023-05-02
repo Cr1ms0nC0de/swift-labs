@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/170889/Downloads/swift-labs-main-15/mynance/Mynance.xcodeproj">
    </FileRef>
 </Workspace>
