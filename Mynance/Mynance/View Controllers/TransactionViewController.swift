@@ -14,6 +14,7 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var transactionPicker: UIPickerView!
     @IBOutlet var transactionAmount: UITextField!
     @IBOutlet var transactionDesc: UITextField!
+    var category: Transaction.Category = .Income
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,14 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let button = sender as! UIBarButtonItem
         if button.title == "Save"{
-            var transaction = defaults.object(forKey: "Users") as? [String:String] ?? [:]
+            var transactions = (defaults.object(forKey: "trans") as? [String:Transaction]) ?? [:]
+            let trans: Transaction = Transaction(amount: Int(transactionAmount.text!) ?? 0, date: Date(), description: transactionDesc.text ?? "", category: category)
+            transactions[transactionDesc.text!] = trans
             
-            transaction[username.text!] = password.text!
-            
-            defaults.set(transaction, forKey: "Users")
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(transactions) {
+                defaults.set(encoded, forKey: "trans")
+            }
         }
     }
     
@@ -41,6 +45,18 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if transactionTypes[row].description == "Income"{
+            category = .Income
+        }
+        else if transactionTypes[row].description == "Utilities"{
+            category = .Utilities
+        }
+        else if transactionTypes[row].description == "Groceries"{
+            category = .Groceries
+        }
+        else{
+            category = .Other
+        }
         return transactionTypes[row]
     }
     
@@ -48,4 +64,5 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }

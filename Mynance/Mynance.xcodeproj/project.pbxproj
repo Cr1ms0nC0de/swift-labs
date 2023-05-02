@@ -14,6 +14,7 @@
 		4AE1331829F831FD006EA8FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1331629F831FD006EA8FB /* Main.storyboard */; };
 		4AE1331A29F831FF006EA8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1331929F831FF006EA8FB /* Assets.xcassets */; };
 		4AE1331D29F831FF006EA8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE1331B29F831FF006EA8FB /* LaunchScreen.storyboard */; };
+		930027412A0171E200AA1CF3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930027402A0171E200AA1CF3 /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4AE1331929F831FF006EA8FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE1331C29F831FF006EA8FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AE1331E29F831FF006EA8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930027402A0171E200AA1CF3 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = "View Controllers/Transaction.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				4ADA83DC29FADE8E00447A25 /* View Controllers */,
+				930027402A0171E200AA1CF3 /* Transaction.swift */,
 				4AE1331029F831FD006EA8FB /* AppDelegate.swift */,
 				4AE1331229F831FD006EA8FB /* SceneDelegate.swift */,
 				4AE1331629F831FD006EA8FB /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				4AE1331529F831FD006EA8FB /* ViewController.swift in Sources */,
 				4AE1331129F831FD006EA8FB /* AppDelegate.swift in Sources */,
 				4AE1331329F831FD006EA8FB /* SceneDelegate.swift in Sources */,
+				930027412A0171E200AA1CF3 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
