@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  mynance
+//  Mynance
 //
-//  Created by Iyer, Eshan R on 4/25/23.
+//  Created by Wilkins, Nolan W on 4/27/23.
 //
 
 import UIKit

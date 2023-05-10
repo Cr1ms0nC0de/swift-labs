@@ -41,15 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4ADA83DC29FADE8E00447A25 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4ADA83DA29FADE7C00447A25 /* TransactionViewController.swift */,
-				4AE1331429F831FD006EA8FB /* ViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		4AE1330429F831FD006EA8FB = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +60,8 @@
 		4AE1330F29F831FD006EA8FB /* Mynance */ = {
 			isa = PBXGroup;
 			children = (
-				4ADA83DC29FADE8E00447A25 /* View Controllers */,
+				4ADA83DA29FADE7C00447A25 /* TransactionViewController.swift */,
+				4AE1331429F831FD006EA8FB /* ViewController.swift */,
 				930027402A0171E200AA1CF3 /* Transaction.swift */,
 				4AE1331029F831FD006EA8FB /* AppDelegate.swift */,
 				4AE1331229F831FD006EA8FB /* SceneDelegate.swift */,

@@ -25,14 +25,30 @@ class TransactionViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let button = sender as! UIBarButtonItem
         if button.title == "Save"{
-            var transactions = (defaults.object(forKey: "trans") as? [String:Transaction]) ?? [:]
-            let trans: Transaction = Transaction(amount: Int(transactionAmount.text!) ?? 0, date: Date(), description: transactionDesc.text ?? "", category: category)
-            transactions[transactionDesc.text!] = trans
             
-            let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(transactions) {
-                defaults.set(encoded, forKey: "trans")
+            if let data = UserDefaults.standard.data(forKey: "trans") {
+                do {
+                    // Create JSON Decoder
+                    let decoder = JSONDecoder()
+
+                    // Decode Note
+                    var transactions = try decoder.decode([Transaction].self, from: data)
+                    let trans: Transaction = Transaction(amount: Int(transactionAmount.text!) ?? 0, date: Date(), description: transactionDesc.text ?? "", category: category)
+                    transactions.append(trans)
+                    for i in transactions{
+                        print(i.description)
+                    }
+                    print(transactions.count)
+                    let encoder = JSONEncoder()
+                    if let encoded = try? encoder.encode(transactions) {
+                        defaults.set(encoded, forKey: "trans")
+                    }
+                }
+                catch {
+                    print("Unable to Decode Note (\(error))")
+                }
             }
+            
         }
     }
     
