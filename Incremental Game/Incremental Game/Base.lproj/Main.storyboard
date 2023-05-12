@@ -23,9 +23,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knx-DM-erI">
-                                <rect key="frame" x="154" y="113.99999999999999" width="82" height="34.333333333333329"/>
+                                <rect key="frame" x="16" y="113.99999999999999" width="358" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Gain 1$"/>
                                 <connections>
                                     <action selector="moneyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fwd-C5-5pM"/>
                                 </connections>
@@ -60,7 +60,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpQ-VK-CyV">
                                                                         <rect key="frame" x="0.0" y="65.666666666666657" width="179" height="65.333333333333343"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Buy 1"/>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -111,7 +111,7 @@
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfJ-7i-OB1">
                                                                         <rect key="frame" x="0.0" y="65.666666666666686" width="179" height="65.333333333333314"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Buy 1"/>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -162,7 +162,7 @@
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-8u-Kt4">
                                                                         <rect key="frame" x="0.0" y="65.666666666666629" width="179" height="65.333333333333314"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Buy 1"/>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -213,7 +213,7 @@
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7p-LV-eSt">
                                                                         <rect key="frame" x="0.0" y="65.666666666666629" width="179" height="65.333333333333314"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="Buy 1"/>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -248,7 +248,7 @@
                             <constraint firstItem="knx-DM-erI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSO-11-yg3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5A-EY-WhC" secondAttribute="bottom" constant="4" id="ktZ-NF-MR0"/>
                             <constraint firstItem="r5A-EY-WhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oPG-qT-bgr"/>
-                            <constraint firstItem="knx-DM-erI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="pHC-YB-z8B"/>
+                            <constraint firstItem="knx-DM-erI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pHC-YB-z8B"/>
                             <constraint firstItem="Bea-WC-ouW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="qyA-pd-6fg"/>
                             <constraint firstItem="r5A-EY-WhC" firstAttribute="top" secondItem="knx-DM-erI" secondAttribute="bottom" constant="31.666666666666686" id="wJh-31-pdi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r5A-EY-WhC" secondAttribute="trailing" constant="16" id="x99-k4-eqH"/>
