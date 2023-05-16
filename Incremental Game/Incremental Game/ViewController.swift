@@ -14,17 +14,36 @@ class ViewController: UIViewController {
     @IBOutlet var generatorsLabel: [UILabel]!
     @IBOutlet var generatorCostsLabel: [UILabel]!
     @IBOutlet var generatorBuyButtons: [UIButton]!
+    @IBOutlet weak var switchNumberFormatButton: UIButton!
     var money: Int = 0
     var generators: [Int] = [0,0,0,0]
     var generatorCosts: [Int] = [2,100,10000,1000000]
     var generateAmount: [Int] = [0,0,0,0]
+    let formatter = NumberFormatter()
+    var scientific : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        formatter.numberStyle = .scientific
+        formatter.positiveFormat = "0.###E+0"
+        formatter.exponentSymbol = "e"
         moneyLabel.text = "\(money)$"
+        addMoneyButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
+        switchNumberFormatButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
         for i in 0...3{
-            generatorsLabel[i].text = "\(generators[i])"
-            generatorCostsLabel[i].text = "\(generatorCosts[i])$"
+            if scientific{
+                if let scientificFormatted = formatter.string(for: generators[i]) {
+                    generatorsLabel[i].text = "\(scientificFormatted)"
+                }
+                if let scientificFormatted = formatter.string(for: generatorCosts[i]) {
+                    generatorCostsLabel[i].text = "\(scientificFormatted)$"
+                }
+            }
+            else{
+                generatorsLabel[i].text = "\(generators[i])"
+                generatorCostsLabel[i].text = "\(generatorCosts[i])$"
+            }
         }
         let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateStuff), userInfo: nil, repeats: true)
         for i in generatorBuyButtons{
@@ -40,22 +59,53 @@ class ViewController: UIViewController {
         else{
             money+=generators[0]
         }
-        moneyLabel.text = "\(money)$"
+        if scientific{
+            if let scientificFormatted = formatter.string(for: money) {
+                moneyLabel.text = "\(scientificFormatted)$"
+            }
+        }
+        else{
+            moneyLabel.text = "\(money)$"
+        }
     }
     @objc func updateStuff(){
         money += generateAmount[0]
-        moneyLabel.text = "\(money)$"
+        if scientific{
+            if let scientificFormatted = formatter.string(for: money) {
+                moneyLabel.text = "\(scientificFormatted)$"
+            }
+        }
+        else{
+            moneyLabel.text = "\(money)$"
+        }
         for i in 1...generators.count-1{
             generators[i-1] += generateAmount[i]
             generateAmount[i-1] += generateAmount[i]
-            generatorsLabel[i].text = "\(generators[i])"
-            generatorsLabel[i-1].text = "\(generators[i-1])"
+            if scientific{
+                if let scientificFormatted = formatter.string(for: generators[i]) {
+                    generatorsLabel[i].text = "\(scientificFormatted)"
+                }
+                if let scientificFormatted = formatter.string(for: generators[i-1]) {
+                    generatorsLabel[i-1].text = "\(scientificFormatted)"
+                }
+            }
+            else{
+                generatorsLabel[i].text = "\(generators[i])"
+                generatorsLabel[i-1].text = "\(generators[i-1])"
+            }
         }
         if(generators[0] > 0){
-            addMoneyButton.titleLabel?.text = "Gain \(generators[0])$"
+            if scientific{
+                if let scientificFormatted = formatter.string(for: generators[0]) {
+                    addMoneyButton.setTitle("Gain \(scientificFormatted)$", for: .normal)
+                }
+            }
+            else{
+                addMoneyButton.setTitle("Gain \(generators[0])$", for: .normal)
+            }
         }
         else{
-            addMoneyButton.titleLabel?.text = "Gain 1$"
+            addMoneyButton.setTitle("Gain 1$", for: .normal)
         }
         //        for i in 0...3{
         //            if generators[i] >= 100{
@@ -84,7 +134,50 @@ class ViewController: UIViewController {
             money -= generatorCosts[sender.tag]
             moneyLabel.text = "\(money)$"
             generatorCosts[sender.tag] = Int(Double(generatorCosts[sender.tag]) * 1.5)
-            generatorCostsLabel[sender.tag].text = "\(generatorCosts[sender.tag])$"
+            if scientific{
+                if let scientificFormatted = formatter.string(for: generatorCosts[sender.tag]) {
+                    generatorCostsLabel[sender.tag].text = "\(scientificFormatted)$"
+                }
+            }
+            else{
+                generatorCostsLabel[sender.tag].text = "\(generatorCosts[sender.tag])$"
+            }
+        }
+    }
+    @IBAction func switchNumberFormat(_ sender: Any) {
+        if scientific{
+            scientific = false
+            switchNumberFormatButton.setTitle("Normal", for: .normal)
+        }
+        else{
+            scientific = true
+            switchNumberFormatButton.setTitle("Scientific", for: .normal)
+        }
+        for i in 0...3{
+            if scientific{
+                if let scientificFormatted = formatter.string(for: generators[i]) {
+                    generatorsLabel[i].text = "\(scientificFormatted)"
+                }
+                if let scientificFormatted = formatter.string(for: generatorCosts[i]) {
+                    generatorCostsLabel[i].text = "\(scientificFormatted)$"
+                }
+            }
+            else{
+                generatorsLabel[i].text = "\(generators[i])"
+                generatorCostsLabel[i].text = "\(generatorCosts[i])$"
+            }
+        }
+        if scientific{
+            if let scientificFormatted = formatter.string(for: money) {
+                moneyLabel.text = "\(scientificFormatted)$"
+            }
+            if let scientificFormatted = formatter.string(for: generators[0]) {
+                addMoneyButton.titleLabel?.text = "Gain \(scientificFormatted)$"
+            }
+        }
+        else{
+            moneyLabel.text = "\(money)$"
+            addMoneyButton.titleLabel?.text = "Gain \(generators[0])$"
         }
     }
 }

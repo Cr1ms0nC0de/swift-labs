@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bea-WC-ouW">
-                                <rect key="frame" x="174.33333333333334" y="86" width="41.333333333333343" height="20.333333333333329"/>
+                                <rect key="frame" x="174.33333333333334" y="86" width="41.333333333333343" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knx-DM-erI">
-                                <rect key="frame" x="16" y="113.99999999999999" width="358" height="34.333333333333329"/>
+                                <rect key="frame" x="16" y="112.66666666666667" width="358" height="35.666666666666671"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Gain 1$"/>
                                 <connections>
@@ -239,12 +239,28 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRu-ck-fAI">
+                                <rect key="frame" x="156" y="156" width="79.333333333333314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5f5-BD-VLx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Normal"/>
+                                <connections>
+                                    <action selector="switchNumberFormat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4q-vX-reV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zRu-ck-fAI" firstAttribute="centerY" secondItem="knx-DM-erI" secondAttribute="centerY" constant="43" id="1SV-kd-RHI"/>
+                            <constraint firstItem="r5A-EY-WhC" firstAttribute="top" secondItem="zRu-ck-fAI" secondAttribute="bottom" constant="-11" id="C0G-Qp-59A"/>
+                            <constraint firstItem="zRu-ck-fAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="D8Y-SB-AUn"/>
                             <constraint firstItem="knx-DM-erI" firstAttribute="top" secondItem="Bea-WC-ouW" secondAttribute="bottom" constant="7.6666666666666714" id="IsE-bn-NkK"/>
                             <constraint firstItem="knx-DM-erI" firstAttribute="centerX" secondItem="Bea-WC-ouW" secondAttribute="centerX" id="Q5i-Pv-DFP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zRu-ck-fAI" secondAttribute="trailing" symbolic="YES" id="UQW-f5-yTF"/>
+                            <constraint firstItem="zRu-ck-fAI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="cpE-nd-orf"/>
                             <constraint firstItem="knx-DM-erI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jSO-11-yg3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r5A-EY-WhC" secondAttribute="bottom" constant="4" id="ktZ-NF-MR0"/>
                             <constraint firstItem="r5A-EY-WhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oPG-qT-bgr"/>
@@ -257,6 +273,7 @@
                     <connections>
                         <outlet property="addMoneyButton" destination="knx-DM-erI" id="YJq-lB-xcs"/>
                         <outlet property="moneyLabel" destination="Bea-WC-ouW" id="RfO-FV-EwD"/>
+                        <outlet property="switchNumberFormatButton" destination="zRu-ck-fAI" id="Qk8-fk-5hz"/>
                         <outletCollection property="generatorsLabel" destination="OF2-sh-38c" collectionClass="NSMutableArray" id="FG5-ND-pmr"/>
                         <outletCollection property="generatorsLabel" destination="0VO-va-3fo" collectionClass="NSMutableArray" id="Wzm-wl-bvW"/>
                         <outletCollection property="generatorsLabel" destination="3gO-Ie-w1C" collectionClass="NSMutableArray" id="fZb-3U-AlD"/>
